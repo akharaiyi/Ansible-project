@@ -1,7 +1,6 @@
 ---
 
 - name: "my first play"
-  hosts: all
   become: yes
 
   tasks:
