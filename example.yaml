@@ -1,5 +1,4 @@
 ---
-
 - name: "my first play"
   hosts: "{{ variable_host | default('web') }}"
   become: yes
@@ -15,4 +14,14 @@
   - name: "install tree on all server"
     apt:
       name: tree
-      state: present     
+      state: present   
+
+  - name: "install jq in all server"
+    apt:
+      name: jq
+      state: present
+  - name: "start all services"
+    service:
+      
+    
+
