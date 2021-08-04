@@ -1,13 +1,18 @@
 ---
 
 - name: "my first play"
+  hosts: "{{ variable_host | default('web') }}"
   become: yes
 
   tasks:
-
   - name: "test reachable"
     ping: 
 
   - name: "update cache for this server"
     apt:
       update_cache: yes
+
+  - name: "install tree on all server"
+    apt:
+      name: tree
+      state: present     
