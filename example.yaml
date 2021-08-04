@@ -1,0 +1,14 @@
+---
+
+- name: "my first play"
+  hosts: localhost
+  become: yes
+
+  tasks:
+
+  - name: "test reachable"
+    ping: 
+
+  - name: "update cache for this server"
+    apt:
+      update_cache: yes
